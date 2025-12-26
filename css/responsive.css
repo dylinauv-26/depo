@@ -25,14 +25,15 @@
 
 @media (max-width: 768px) {
     .logo-section {
-        padding: 20px 30px;
         gap: 50px;
     }
 
-    .logo {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
+    .number {
+        font-size: 100px;
+    }
+
+    .marquee span {
+        font-size: 36px;
     }
 
     .number-section {
@@ -67,16 +68,23 @@
     }
 
     .graphic-section {
-        height: 500px;
+        height: 480px;
     }
 
     .rain-section {
-        height: 300px;
+        height: 200px;
     }
 
     .portal-card-badge {
         padding: 12px 30px;
         font-size: 24px;
+    }
+
+    .card-flip--5 img {
+        position: absolute;
+        left: 5%;
+        top: 2%;
+        width: 500px;
     }
 
     @keyframes flyOut1 {
@@ -333,10 +341,19 @@
     }
 }
 
+@media (max-width: 600px) {
+    .graphic-section {
+        height: 400px;
+    }
+}
+
 @media (max-width: 480px) {
-    .logo-section {
-        padding: 15px 20px;
-        gap: 30px;
+    .graphic-section {
+        height: 320px;
+    }
+
+    .marquee span {
+        font-size: 16px;
     }
 
     .logo {
@@ -351,12 +368,8 @@
         height: 280px;
     }
 
-    .graphic-section {
-        height: 400px;
-    }
-
     .rain-section {
-        height: 250px;
+        height: 180px;
     }
 
     .portal-card-badge {
