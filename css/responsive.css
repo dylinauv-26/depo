@@ -25,7 +25,12 @@
 
 @media (max-width: 768px) {
     .logo-section {
-        gap: 50px;
+        gap: 25px;
+        border: 1px solid var(--color-beige);
+    }
+
+    .number-section--full {
+        border: 1px solid var(--color-beige);
     }
 
     .number {
@@ -43,6 +48,7 @@
     .number-section--half {
         width: 100%;
         margin: 0;
+        border: 1px solid var(--color-beige);
     }
 
     .grid-2 {
@@ -55,16 +61,16 @@
     }
 
     .grid-2 .number-section:first-child {
-        border-left: 4px solid var(--color-beige);
-        border-right: 4px solid var(--color-beige);
-        border-bottom: 2px solid var(--color-beige);
+        border-left: 1px solid var(--color-beige);
+        border-right: 1px solid var(--color-beige);
+        border-bottom: 1px solid var(--color-beige);
     }
 
     .grid-2 .number-section:last-child {
-        border-left: 4px solid var(--color-beige);
-        border-right: 4px solid var(--color-beige);
-        border-top: 2px solid var(--color-beige);
-        border-bottom: 4px solid var(--color-beige);
+        border-left: 1px solid var(--color-beige);
+        border-right: 1px solid var(--color-beige);
+        border-top: 1px solid var(--color-beige);
+        border-bottom: 1px solid var(--color-beige);
     }
 
     .graphic-section {
@@ -345,6 +351,13 @@
     .graphic-section {
         height: 400px;
     }
+    .logo-section {
+        padding: 25px 20px;
+    }
+
+    .card-flip--5 img {
+        left: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -352,12 +365,12 @@
         height: 320px;
     }
 
-    .marquee span {
-        font-size: 16px;
+    .card-flip__text {
+        font-size: 22px;
     }
 
-    .logo {
-        max-width: 300px;
+    .marquee span {
+        font-size: 16px;
     }
 
     .number-section {
@@ -369,7 +382,7 @@
     }
 
     .rain-section {
-        height: 180px;
+        height: 120px;
     }
 
     .portal-card-badge {
