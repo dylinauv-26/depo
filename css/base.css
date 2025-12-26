@@ -6,18 +6,22 @@
     --color-white: #FFFFFF;
 }
 
-.container {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, 0.75rem);
-    padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: auto;
-    margin-left: auto;
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    background-color: var(--color-black);
+    overflow-x: hidden;
 }
 
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1340px;
-    }
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--color-black);
 }
 
 .row {
@@ -107,14 +111,6 @@
 
 .animation-stop {
     animation-play-state: paused;
-}
-
-body {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: var(--color-black);
 }
 
 .d-flex {

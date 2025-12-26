@@ -1,0 +1,338 @@
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 35px 69px;
+    gap: 180px;
+    border: 4px solid var(--color-beige);
+}
+
+.number-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 685px;
+    border: 4px solid var(--color-beige);
+    border-top: 0;
+    position: relative;
+}
+
+.number-section--full {
+    border-left: 4px solid var(--color-beige);
+    border-right: 4px solid var(--color-beige);
+}
+
+.number-section--half {
+    width: 720px;
+    margin: 0 auto;
+    border-right: 4px solid var(--color-beige);
+    border-left: 4px solid var(--color-beige);
+    border-bottom: 0;
+}
+
+.grid-2 {
+    display: flex;
+    width: 100%;
+}
+
+.grid-2 .number-section {
+    flex: 1;
+}
+
+.grid-2 .number-section:first-child {
+    border-left: 4px solid var(--color-beige);
+    border-right: 2px solid var(--color-beige);
+}
+
+.grid-2 .number-section:last-child {
+    border-left: 2px solid var(--color-beige);
+    border-right: 4px solid var(--color-beige);
+}
+
+.card-flip {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    z-index: 11;
+    position: relative;
+}
+
+.card-flip__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-flip--1 .card-flip__inner {
+    animation: flipCard 0.8s ease-in-out 2s forwards;
+}
+
+.card-flip--2 .card-flip__inner {
+    animation: flipCard 0.8s ease-in-out 4s forwards;
+}
+
+.card-flip--3 .card-flip__inner {
+    animation: flipCard 0.8s ease-in-out 6s forwards;
+}
+
+.card-flip--4 .card-flip__inner {
+    animation: flipCard 0.8s ease-in-out 8s forwards;
+}
+
+.card-flip--5 .card-flip__inner {
+    animation: flipCard 0.8s ease-in-out 10s forwards;
+}
+
+.card-flip--5 img {
+    animation: svgDraw 3s ease-out 10.8s forwards;
+    opacity: 0;
+}
+
+.card-flip--6 .card-flip__inner {
+    animation: flipCard 0.8s ease-in-out 12s forwards;
+}
+
+.card-flip--7 .card-flip__inner {
+    animation: none;
+}
+
+.card-flip--7 .card-flip__back {
+    backface-visibility: visible;
+    transform: rotateY(0deg);
+    animation: backPosition 1s ease-out 14.5s forwards;
+    overflow: unset;
+}
+
+.card-flip--7 .card-flip__front {
+    animation: frontFadeOut 1s ease-out 14s forwards;
+}
+
+.card-flip--7 .card-flip__front .background-graphic,
+.card-flip--7 .card-flip__front .number {
+    animation: bgGraphicFadeOut 1s ease-out 14s forwards;
+}
+
+.card-flip--7 .card-flip__back img {
+    animation: portalFadeIn 1s ease-out 14.5s forwards, rotation 12s linear 15s infinite;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card-flip--7 .card-flip__back .portal-badge {
+    position: absolute;
+    z-index: 2;
+}
+
+.card-flip--7 .card-flip__back .portal-badge:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate(-500px, 400px);
+    animation: planeFly1 6s ease-out 16s infinite;
+}
+
+.card-flip--7 .card-flip__back .portal-badge:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate(0px, 450px);
+    animation: planeFly2 6s ease-out 17s infinite;
+}
+
+.card-flip--7 .card-flip__back .portal-badge:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate(500px, 400px);
+    animation: planeFly3 6s ease-out 18s infinite;
+}
+
+.card-flip__front,
+.card-flip__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-flip__front {
+    background-color: var(--color-black);
+    z-index: -1;
+}
+
+.card-flip__back {
+    background-color: var(--color-black);
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+
+.graphic-section .card-flip__front {
+    position: relative;
+    overflow: hidden;
+}
+
+.first-card-image {
+    animation: rotation 10s infinite linear;
+    transform-origin: center;
+}
+
+.portal-card-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--color-beige);
+    padding: 18px 56px;
+    border-radius: 48px;
+    font-size: 36px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+.portal-card-badge:nth-child(2) {
+    animation: flyOut1 7s ease-out infinite;
+    animation-delay: 0s;
+}
+
+.portal-card-badge:nth-child(3) {
+    animation: flyOut2 7s ease-out infinite;
+    animation-delay: 0.8s;
+}
+
+.portal-card-badge:nth-child(4) {
+    animation: flyOut3 7s ease-out infinite;
+    animation-delay: 1.6s;
+}
+
+.portal-card-badge:nth-child(5) {
+    animation: flyOut4 7s ease-out infinite;
+    animation-delay: 2.4s;
+}
+
+.portal-card-badge:nth-child(6) {
+    animation: flyOut5 7s ease-out infinite;
+    animation-delay: 3.2s;
+}
+
+.portal-card-badge:nth-child(7) {
+    animation: flyOut6 7s ease-out infinite;
+    animation-delay: 4s;
+}
+
+.portal-card-badge:nth-child(8) {
+    animation: flyOut7 7s ease-out infinite;
+    animation-delay: 4.8s;
+}
+
+.portal-card-badge:nth-child(9) {
+    animation: flyOut8 7s ease-out infinite;
+    animation-delay: 5.6s;
+}
+
+.graphic-section {
+    position: relative;
+    width: 100%;
+    height: 879px;
+    overflow: hidden;
+}
+
+.background-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rain-section {
+    position: relative;
+    width: 100%;
+    height: 466px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rain-graphic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: none;
+}
+
+.toys-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.toys-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border-left: 4px solid var(--color-beige);
+    border-right: 4px solid var(--color-beige);
+    opacity: 0;
+    animation: bgFadeIn 1s ease-out 8.8s forwards;
+    z-index: 0;
+}
+
+.toy {
+    position: absolute;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toy--1 {
+    left: 8%;
+    animation: toyFall1 5s ease-in-out infinite;
+    animation-delay: 8.8s;
+}
+
+.toy--2 {
+    left: 22%;
+    animation: toyFall2 5.5s ease-in-out infinite;
+    animation-delay: 9.5s;
+}
+
+.toy--3 {
+    left: 38%;
+    animation: toyFall3 5.2s ease-in-out infinite;
+    animation-delay: 10.2s;
+}
+
+.toy--4 {
+    left: 58%;
+    animation: toyFall4 5.8s ease-in-out infinite;
+    animation-delay: 10.9s;
+}
+
+.toy--5 {
+    left: 48%;
+    animation: toyFall5 5.4s ease-in-out infinite;
+    animation-delay: 11.6s;
+}
+
+.toy--6 {
+    left: 38%;
+    animation: toyFall6 5.6s ease-in-out infinite;
+    animation-delay: 12.3s;
+}
